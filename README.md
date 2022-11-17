@@ -44,7 +44,7 @@
     1. stylelint-order css 属性排序
     1. stylelint-scss scss 支持
     1. stylelint-less less 支持
-1. husky: git hooks 工具
+1. husky: git hooks 工具,初始化时先执行 `husky install && husky add .husky/pre-commit 'npm run pre-commit'`
 
 ### scripts
 
@@ -58,7 +58,7 @@
     "preview": "vite preview", // 预览
     "eslint": "eslint --ext .js,.ts ./ --max-warnings 0 --fix", // eslint 修复
     "stylelint": "stylelint --fix src/**/*.{html,css,sass,less}", // stylelint 修复
-    "prepare": "husky install && husky add .husky/pre-commit 'npm run pre-commit'", // 安装并配置 husky 使其在 git 提交前执行 pre-commit
+    "prepare": "husky install", // 安装并配置 husky 使其在 git 提交前执行 pre-commit
     "pre-commit": "pretty-quick --staged && npm run eslint && npm run stylelint" // git 提交前格式化并修复代码
   }
   //...

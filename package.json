@@ -7,7 +7,7 @@
     "preview": "vite preview",
     "eslint": "eslint src/ --ext .js,.ts --fix",
     "stylelint": "stylelint src/**/*.{html,css,less,scss} --fix",
-    "prepare": "husky install && husky add .husky/pre-commit 'npm run pre-commit'",
+    "prepare": "husky install",
     "pre-commit": "pretty-quick --staged && npm run eslint && npm run stylelint"
   },
   "devDependencies": {
