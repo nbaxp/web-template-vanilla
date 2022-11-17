@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import copy from 'rollup-plugin-copy';
 import { resolve } from 'path';
 import fs from 'fs';
 
@@ -40,20 +39,5 @@ export default defineConfig({
   resolve: {
     alias,
   },
-  plugins: [
-    copy({
-      targets: [
-        {
-          src: 'dist/index.html',
-          dest: 'dist',
-          transform: (contents) => {
-            return replaceImportMap(contents.toString());
-          },
-        },
-        { src: 'assets', dest: 'dist' },
-      ],
-      hook: 'writeBundle',
-    }),
-    transformHtml(),
-  ],
+  plugins: [transformHtml()],
 });

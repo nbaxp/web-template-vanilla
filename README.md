@@ -32,7 +32,7 @@
 
 1. vite: 打包工具
 1. prettier: 格式化
-1. scss: scss 支持
+1. sass: sass、scss 支持
 1. less: less 支持
 1. eslint:
     1. eslint-config-airbnb-base 依赖于 eslint 和 eslint-plugin-import
@@ -45,8 +45,6 @@
     1. stylelint-scss scss 支持
     1. stylelint-less less 支持
 1. husky: git hooks 工具
-1. lint-staged: 对暂存区的文件执行检测命令
-1. rollup-plugin-copy: 用于 vite 打包时复制 assets 到 dist 目录
 
 ### scripts
 
