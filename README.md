@@ -56,10 +56,11 @@
     "dev": "vite", // 调试
     "build": "vite build", // 构建
     "preview": "vite preview", // 预览
-    "eslint": "eslint --ext .js,.ts ./ --max-warnings 0 --fix", // eslint 修复
-    "stylelint": "stylelint --fix src/**/*.{html,css,sass,less}", // stylelint 修复
-    "prepare": "husky install", // 安装并配置 husky 使其在 git 提交前执行 pre-commit
-    "pre-commit": "pretty-quick --staged && npm run eslint && npm run stylelint" // git 提交前格式化并修复代码
+    "lint": "npm run eslint && npm run stylelint && npm run prettier", // 脚本修复代码
+    "eslint": "eslint src/ --ext .js,.ts --fix", // eslint
+    "stylelint": "stylelint src/**/*.{html,css,less,scss} --fix", // 样式代码修复
+    "prettier": "prettier -c --write \"src/**/*\"", // 格式化
+    "prepare": "husky install" // husky
   }
   //...
 }
@@ -70,7 +71,7 @@
 ```sh
 npm pkg set scripts.prepare="husky install" # > package.json scripts
 npm run prepare
-npx husky add .husky/pre-commit " lint-staged" # > .husky pre-commit
+npx husky add .husky/pre-commit "npx --no-install lint-staged" # > .husky pre-commit
 ```
 
 ### lint-staged
