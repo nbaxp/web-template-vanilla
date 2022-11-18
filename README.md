@@ -46,6 +46,14 @@
     1. stylelint-less less 支持
 1. husky: git hooks 工具,初始化时先执行 `husky install && husky add .husky/pre-commit 'npm run pre-commit'`
 
+husky配置
+
+```sh
+npm pkg set scripts.prepare="husky install" # > package.json scripts
+npm run prepare
+npx husky add .husky/pre-commit "npm run lint" # > .husky pre-commit
+```
+
 ### scripts
 
 ```json
