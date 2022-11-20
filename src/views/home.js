@@ -3,10 +3,7 @@ import Chart from '../components/chart.js';
 
 const components = { Chart };
 
-const template = html`<div
-  style="margin: 1em auto;width:500px;"
-  v-for="item in charts"
->
+const template = html`<div style="margin: 1em auto;width:500px;" v-for="item in charts">
   <chart :options="item" height="280px" />
 </div>`;
 

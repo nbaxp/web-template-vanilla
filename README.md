@@ -37,7 +37,7 @@
 1. eslint:
    1. eslint-config-airbnb-base 依赖于 eslint 和 eslint-plugin-import
    1. eslint-config-prettier 用于关闭 eslint 和 prettier 冲突的规则
-   1. eslint-plugin-prettier 用于将 prettier 的规则作为 eslint 来运行
+   1. eslint-plugin-prettier 用于将 prettier 的错误作为 eslint 规则报告
 1. stylelint:
    1. stylelint-config-standard 继承自 stylelint-config-recommended 的规则集合
    1. stylelint-config-prettier 用于关闭和 prettier 冲突的规则

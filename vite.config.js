@@ -18,9 +18,7 @@ const transformHtml = () => {
 const getImports = () => {
   const file = resolve(process.cwd(), 'index.html');
   const html = fs.readFileSync(file, 'utf-8');
-  const importmapContent = html.match(
-    /<script[^<>]+importmap[^>]+>([^<>]+)<\/script>\n*/
-  )[1];
+  const importmapContent = html.match(/<script[^<>]+importmap[^>]+>([^<>]+)<\/script>\n*/)[1];
   const importmap = JSON.parse(importmapContent.replaceAll('./', '/'));
   console.log('importmap:');
   console.log(importmap);
